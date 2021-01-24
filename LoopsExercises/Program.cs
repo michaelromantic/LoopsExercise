@@ -53,6 +53,12 @@ namespace LoopsExercises
 
             // Enter your solution here
 
+            for (int count1 = 5; count1 >= 1; count1 --)
+            {
+                Console.WriteLine(count1);
+            }
+
+            Console.Write("Press enter to return to the Main Menu");
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
@@ -68,18 +74,44 @@ namespace LoopsExercises
 
             // Enter your solution here
 
+            Console.WriteLine("Enter a number between 1-20.");
+            int userNumber = Convert.ToInt32(Console.ReadLine());
+
+            for (int count2 = 1; userNumber >= count2; userNumber --)
+            {
+                Console.WriteLine(userNumber);
+            }
+
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
 
         static void SquareOfEvenNumbers()
         {
-            // Print the squares (the number multipied by itself) for even numbers between 1-9.
+            // Print the squares (the number multiplied by itself) for even numbers between 1-9.
 
             Console.Clear();
             Console.WriteLine("PRINT THE SQUARE OF EVEN NUMBERS\n");
 
             // Enter your solution here
+
+            int startNumber = 1;
+
+            while (startNumber <= 9)
+            {
+                int squareNumber = startNumber * startNumber;
+                startNumber++;
+                {
+                    if (startNumber % 2 == 0)
+                    {
+                        // Do nothing
+                    }
+                    else
+                    {
+                        Console.WriteLine(squareNumber);
+                    }
+                }
+            }
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -96,6 +128,17 @@ namespace LoopsExercises
             Console.WriteLine("GUESS THE MAGIC NUMBER\n");
 
             // Enter your solution here
+
+            Console.WriteLine("Pick a number, any number!");
+            int userNumber2 = Convert.ToInt32(Console.ReadLine());
+
+            while (userNumber2 % 3 != 0)
+            {
+                Console.WriteLine("Try Again!");
+                userNumber2 = Convert.ToInt32(Console.ReadLine());
+                if (userNumber2 % 3 == 0)
+                    Console.WriteLine("You Won!");
+            }
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
