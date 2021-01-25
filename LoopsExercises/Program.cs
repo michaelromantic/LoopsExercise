@@ -59,10 +59,8 @@ namespace LoopsExercises
             }
 
             Console.Write("Press enter to return to the Main Menu");
-            Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
-
 
         static void ReverseCounting()
         {
@@ -132,17 +130,22 @@ namespace LoopsExercises
             Console.WriteLine("Pick a number, any number!");
             int userNumber2 = Convert.ToInt32(Console.ReadLine());
 
-            while (userNumber2 % 3 != 0)
+            if (userNumber2 % 3 != 0)
             {
-                Console.WriteLine("Try Again!");
-                userNumber2 = Convert.ToInt32(Console.ReadLine());
-                if (userNumber2 % 3 == 0)
-                    Console.WriteLine("You Won!");
+                while (userNumber2 % 3 != 0)
+                {
+                    Console.WriteLine("Try Again!");
+                    userNumber2 = Convert.ToInt32(Console.ReadLine());
+                    if (userNumber2 % 3 == 0)
+                        Console.WriteLine("You Won!");
+                }
             }
+
+            else if (userNumber2 % 3 == 0)
+                Console.WriteLine("You Won!");
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
-
     }
 }
